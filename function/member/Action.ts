@@ -13,7 +13,8 @@ export class Actions {
    * @description 更新在线状态
    */
   static async update () {
-    if (Member.users === {}) return
+    // @ts-ignore
+    if (Member.users === {}) return 
     let index: number = 0
     const list = await Ran.method.utils.getUserList()
     for (const uid of Object.keys(Member.users)) {
